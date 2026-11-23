@@ -1,4 +1,4 @@
-
+```bash
 #!/bin/bash
 
 set -o pipefail
@@ -73,6 +73,11 @@ if ! mkdir -p "$DEST"; then
     exit 1
 fi
 
+if [ ! -d "$DEST" ] || [ ! -w "$DEST" ]; then
+    echo "Error: Direktori tujuan tidak dapat digunakan"
+    exit 1
+fi
+
 # Ekstraksi arsip
 if tar --no-same-owner --no-same-permissions \
     -xzf "$ARCHIVE" -C "$DEST"; then
@@ -83,4 +88,4 @@ else
     echo "Error: Proses restore gagal"
     exit 1
 fi
-
+```
