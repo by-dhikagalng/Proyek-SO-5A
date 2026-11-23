@@ -12,7 +12,7 @@ if [ ! -d "$SOURCE" ]; then
     exit 2
 fi
 
-if [ -z "$(ls -A "$SOURCE")" ]; then
+if [ -z "$(find "$SOURCE" -mindepth 1 ! -name '.gitkeep' -print -quit)" ]; then
     echo "Error: Folder sumber kosong"
     exit 2
 fi
