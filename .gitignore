@@ -32,3 +32,8 @@ output/*.sha256
 
 # Restore testing results
 restore_test/
+
+# Generated load testing files
+tests/load/*.bin
+tests/load10/*.bin
+tests/load50/*.bin
