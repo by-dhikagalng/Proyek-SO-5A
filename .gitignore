@@ -1,0 +1,21 @@
+# OS / temporary files
+*.tmp
+*.log
+*.swp
+*.swo
+
+# Linux / editor files
+.DS_Store
+Thumbs.db
+
+# Docker
+docker-compose.override.yml
+
+# Local evidence/output
+evidence/*.txt
+evidence/*.log
+
+# Sensitive/local configuration
+.env
+*.key
+*.pem
