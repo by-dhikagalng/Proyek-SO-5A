@@ -19,3 +19,10 @@ evidence/*.log
 .env
 *.key
 *.pem
+
+# Generated backup archives
+output/*.tar.gz
+
+# Load testing dummy files
+tests/load10/*.bin
+tests/load50/*.bin
